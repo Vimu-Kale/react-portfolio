@@ -20,7 +20,7 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  console.log(isMobile);
+  // console.log(isMobile);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -70,8 +70,10 @@ const Header = () => {
                 // sx={{mt:3}}
               >
                 <MenuItem onClick={handleClose}><Link style={{textDecoration:"none", color:"black"}} to="/">Home</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link style={{textDecoration:"none", color:"black"}} to="/about">About</Link></MenuItem>
                 <MenuItem onClick={handleClose}><Link style={{textDecoration:"none", color:"black"}} to="/skills">Skills</Link></MenuItem>
                 <MenuItem onClick={handleClose}><Link style={{textDecoration:"none", color:"black"}} to="/projects">Projects</Link></MenuItem>
+                <MenuItem onClick={handleClose}><Link style={{textDecoration:"none", color:"black"}} to="/contact">Contact</Link></MenuItem>
               </Menu>
               </div>
               )
